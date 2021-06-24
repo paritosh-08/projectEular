@@ -1,19 +1,22 @@
 module Main where
 
-import Questions.Q1 ( q1, q1Text )
-import Questions.Q2 ( q2, q2Text )
-import Questions.Q3 ( q3, q3Text )
-import Questions.Q4 ( q4, q4Text )
+import Questions.Q1 as Q1
+import Questions.Q2 as Q2
+import Questions.Q3 as Q3
+import Questions.Q4 as Q4
+import Questions.Q5 as Q5
 
 import PrintQnA ( printQnA )
 
 main :: IO ()
 main = do
   -- "Q1. " ++ q1Text ++ "\n\n\n\nAns: " ++ show (q1 1 2 3 4)
-  printQnA q1Text (q1 3 5 1 1000)
+  printQnA Q1.question (Q1.solve 3 5 1 1000)
 
-  printQnA q2Text (q2 4000000)
+  printQnA Q2.question (Q2.solve 4000000)
 
-  printQnA q3Text (q3 600851475143)
+  printQnA Q3.question (Q3.solve 600851475143)
 
-  printQnA q4Text (q4 3)
+  printQnA Q4.question (Q4.solve 3)
+
+  printQnA Q5.question (Q5.solve 1 20)
