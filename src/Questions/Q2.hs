@@ -2,13 +2,13 @@ module Questions.Q2 where
 
 import Data.List
 
-q2:: Integer -> Integer
+q2:: Int -> Int
 q2 limit =
-    sum evenFib
+    fromInteger (sum evenFib)
         where
-            -- ind = elemIndex (head [x | x<-fibs , x>limit]) fibs
-            evenFib = [x | x<- fibSeries, x<limit, even x]
-            fibSeries = take 100 fibs
+            evenFib = [x | x<- fibSeries, x<nLimit, even x]
+            fibSeries = takeWhile (<nLimit) fibs
+            nLimit = toInteger limit
 
 fibs :: [Integer]
 fibs = 1 : 2 : zipWith (+) fibs (tail fibs)
