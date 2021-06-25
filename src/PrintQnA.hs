@@ -1,3 +1,5 @@
+-- Module for printing in color
+
 module PrintQnA where
 
 import System.Console.ANSI

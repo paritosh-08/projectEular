@@ -10,7 +10,7 @@ import PrintQnA ( printQnA )
 
 main :: IO ()
 main = do
-  -- "Q1. " ++ q1Text ++ "\n\n\n\nAns: " ++ show (q1 1 2 3 4)
+  
   printQnA Q1.question (Q1.solve 3 5 1 1000)
 
   printQnA Q2.question (Q2.solve 4000000)
