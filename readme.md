@@ -9,14 +9,14 @@ The process is pretty simple, you need to follow the following steps to get star
 ``` bash
 git clone git@github.com:paritosh-08/projectEular.git
 ```
-2. Run the tests using the following command and hope that everything works 😜:
-``` bash
-cabal new-test
-```
-3. Install using the following command:
+2. Install using the following command:
 ``` bash
 cabal update
 cabal install
+```
+3. Run the tests using the following command and hope that everything works 😜:
+``` bash
+cabal new-test
 ```
 ## Run the program
 Run the following command to run the program:
