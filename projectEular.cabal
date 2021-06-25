@@ -15,13 +15,27 @@ build-type:          Simple
 extra-source-files:  CHANGELOG.md
 cabal-version:       >=1.10
 
+library
+  exposed-modules:      ProjectEular
+  other-modules:        PrintQnA
+                      , Questions.Q1
+                      , Questions.Q2
+                      , Questions.Q3
+                      , Questions.Q4
+                      , Questions.Q5
+  build-depends:        
+      base >= 4.12 && <5
+    , ansi-terminal
+  hs-source-dirs:       src-lib
+  default-language:     Haskell2010
+
 test-suite projectEular-tests
   type:                 exitcode-stdio-1.0
   build-depends:        
       base >= 4.12 && <5
     , ansi-terminal
     , HUnit
-  hs-source-dirs:       test,src
+  hs-source-dirs:       test,src-lib
   default-language:     Haskell2010
   main-is:              test.hs
   other-modules:       PrintQnA
@@ -31,17 +45,11 @@ test-suite projectEular-tests
                        Questions.Q4
                        Questions.Q5
 
-executable projectEular
+executable projectEularExec
   main-is:             Main.hs
-  other-modules:       PrintQnA
-                       Questions.Q1
-                       Questions.Q2
-                       Questions.Q3
-                       Questions.Q4
-                       Questions.Q5
   -- other-extensions:
   build-depends:
-      base >=4.12 && <4.13
-    , ansi-terminal
+      base >=4.12 && <5
+    , projectEular
   hs-source-dirs:      src
   default-language:    Haskell2010

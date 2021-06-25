@@ -12,7 +12,7 @@ git clone git@github.com:paritosh-08/projectEular.git
 2. Install using the following command:
 ``` bash
 cabal update
-cabal install
+cabal new-install
 ```
 3. Run the tests using the following command and hope that everything works 😜:
 ``` bash
@@ -21,6 +21,6 @@ cabal new-test
 ## Run the program
 Run the following command to run the program:
 ``` bash
-cabal new-run :projectEular
+cabal new-run :projectEularExec
 ```
 You should get some output after running the above command.
